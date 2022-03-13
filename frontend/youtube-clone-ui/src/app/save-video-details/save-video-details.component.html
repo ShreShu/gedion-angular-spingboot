@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save vedio details</title>
+</head>
+
+<body>
+    <div class="chip">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="card shadow-sm p-1">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <form class="form-group" [formGroup]="SaveDetailForm" (ngSubmit)="SaveDetails()">
+                                <div class="row">
+                                    <label for="songTitle" class="col-sm-4 col-form-label">Song Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" id="title" class="form-control form-control-sm"
+                                            formControlName="title">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="album" class="col-sm-4 col-form-label">Description</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control form-control-sm" id="album"
+                                            formControlName="description">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="video_status" class="col-sm-4 col-form-label">Video Status:</label>
+                                    <div class="col-sm-8">
+                                        <select formControlName="video_status" class="form-control form-control-sm">
+                                            <option class="form-control">PUBLIC</option>
+                                            <option class="form-control">PRIVATE</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="thumbnail" class="col-sm-4 col-form-label">Thumbnail:</label>
+                                    <div class="col-sm-8 custom-file">
+                                      <input type="file" class="custom-file-input" id="thumbnail"
+                                      aria-describedby="thumbnail">
+                                    </div>
+                                    <p>selectd file:</p>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-3 m-sm-auto">
+                                        <button type="submit"
+                                            class="btn btn-outline-success btn-sm mt-2">Submit</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</body>
+
+</html>

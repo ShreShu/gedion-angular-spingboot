@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--google font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Youtube clone</title>
+</head>
+    <div class="videos">
+        <h1>Recommended</h1>
+     
+    <div class="video_container">
+
+
+        <div class="row row-cols-md-5 ms-2">    
+            <div class="col" *ngFor="let vedio of this.AllVideos">
+
+            <div class="card video" style="width: 14rem;height:14rem;">
+              <a (click)="playVideo(this.vedio.id)"
+              class="card-img-top" style="width: 100%;">
+                <img src="{{this.vedio.thumbnailUrl}}" class="thumbnail" style="width: 100%;"><!--thumb nail-->
+             </a>
+              <div class="row">
+                  <div class="col-3">
+
+                  </div>
+                  <div class="col-8">
+                    <div class="row">
+                        <a href="">{{this.vedio.title}}</a> <!--video name -->    
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>{{this.vedio.description}}</p> <!--description name-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>{{this.vedio.viewCount}}</p> <!--Views-->
+                        </div>
+                    </div>
+
+                    
+                  </div>
+                
+              </div>
+            </div>
+        </div> 
+    </div>
+</div>    
+    </div>
+
+
+</html>

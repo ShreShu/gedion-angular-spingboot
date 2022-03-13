@@ -1,0 +1,21 @@
+.play-container{
+
+    margin-top: 10px;
+    margin-left: 2px;
+    display: flex;
+}
+
+.video-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.right-sidebar{
+    flex-basis: 30%;
+}
+
+iframe{
+    flex: 1;
+}
